@@ -1,0 +1,125 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<style>
+			#map{
+				width:600px; 
+				height:400px; 
+			}
+		</style>
+		<script src = "https://maps.googleapis.com/maps/api/js"></script>
+
+		<script> 
+			function initMap() {
+  			var uluru = {lat: -25.363, lng: 131.044};
+  			var map = new google.maps.Map(document.getElementById('map'), {
+    		zoom: 4,
+    		center: uluru
+  		});
+
+  		var contentString = '<div id="content">'+
+      		'<div id="siteNotice">'+
+      		'</div>'+
+      		'<h1 id="firstHeading" class="firstHeading">Uluru</h1>'+
+      		'<div id="bodyContent">'+
+      		'<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
+      		'sandstone rock formation in the southern part of the '+
+      		'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) '+
+      		'south west of the nearest large town, Alice Springs; 450&#160;km '+
+      		'(280&#160;mi) by road. Kata Tjuta and Uluru are the two major '+
+      		'features of the Uluru - Kata Tjuta National Park. Uluru is '+
+      		'sacred to the Pitjantjatjara and Yankunytjatjara, the '+
+      		'Aboriginal people of the area. It has many springs, waterholes, '+
+      		'rock caves and ancient paintings. Uluru is listed as a World '+
+      		'Heritage Site.</p>'+
+      		'<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
+      		'https://en.wikipedia.org/w/index.php?title=Uluru</a> '+
+      		'(last visited June 22, 2009).</p>'+
+      		'</div>'+
+      		'</div>';
+
+  		var infowindow = new google.maps.InfoWindow({
+    		content: contentString
+  		});
+
+  		var marker = new google.maps.Marker({
+    		position: uluru,
+    		map: map,
+    		title: 'Uluru (Ayers Rock)'
+  		});
+  		marker.addListener('click', function() {
+    		infowindow.open(map, marker);
+  		});
+	}
+
+
+
+
+
+
+
+
+			google.maps.event.addDomListener(window, 'load', initialize);
+		</script>
+	</head>
+	<body>
+		<div data-role = "page" id = "page6">
+			<div id = "PrimariesHeader"<center> Primaries </center></div>
+			<div id = "list">
+				<div id = "6date">Monday Feburary 1st </div>
+					<div id = "6state">Iowa Caucus</div>
+				<div id = "6date">Tuesday February 9th </div>
+					<div id = "6state"> New Hampshire Primaries </div>
+				<div id = "6date"> Saturday February 20th </div>
+					<div id = "6state"> Nevada Caucus (Democratic) <br>
+										South Carolina Primaries (Republican) <br>
+										Washington Caucus (Republican)
+					</div>
+				<div id = "6date"> Tuesday February 23rd </div>
+					<div id = "6state"> Nevada Caucus (Republican) </div>
+				<div id = "6date"> Tuesday Febraury 27th </div>
+					<div id = "6state">South Carolina (Democratic) </div>
+				<div id = "6date"> Tuesday March 1st (Super Tuesday) </div>
+					<div id = "6state"> Alabama <br>
+										Alaska Caucus (Republican) <br>
+										American Samoa Caucus (Democratic) <br>
+										Arkansas <br>
+										Colorado Caucus <br>
+										Georgia <br>
+										Massachusetts <br>
+										Minnesota Caucus <br>
+										North Dakota Caucus (Republican) <br>
+										Oklahoma <br>
+										Tennesse <br>
+										Texas <br>
+										Vermont <br>
+										Virginia <br>
+										Wyoming Caucus (Republican)
+					</div>
+				<div id = "6date"> Saturday March 5th </div>
+					<div id = "6state"> Kansas Caucus <br>
+										Kentucky Caucus (Republican) <br>
+										Louisiana <br>
+										Maine Caucus (Republican) <br>
+										Nebraska Caucus (Democratic) <br>
+					</div>
+				<div id = "6date"> Sunday March 6th </div>
+					<div id = "6state"> Maine Caucus (Democratic) <br>
+										Puerto Rico (Republican) <br>
+					</div>
+				<div id = "6date"> Tuesday March 8th </div>
+					<div id = "6state"> Hawaii Caucus (Republican) <br>
+										Idaho (Republican) <br>
+										Michigan <br>
+										Mississippi <br>
+										Democrats Abroad <br>
+
+
+
+
+			</div>
+		</div>
+		<div id = "map"></div>
+
+	</body>
+</html>
